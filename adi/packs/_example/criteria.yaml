@@ -1,0 +1,40 @@
+# Example domain pack — generic technology evaluation
+# Copy this template to packs/<your_domain>/criteria.yaml and customize.
+
+policy:
+  name: balanced
+  strategy: balanced
+  uncertainty_penalty_factor: 0.2
+  missingness_penalty_factor: 0.3
+  variance_penalty_factor: 0.0
+  exploration_bonus_factor: 0.0
+  constraint_priority_mode: eliminate
+  soft_constraint_penalty: 0.15
+  topsis_enabled: false
+  sensitivity_perturbation_pct: 10.0
+
+criteria:
+  - name: performance
+    weight: 0.35
+    direction: benefit
+    description: "How well does the option perform the primary task?"
+
+  - name: cost
+    weight: 0.25
+    direction: cost
+    description: "Total cost of ownership (lower is better)"
+
+  - name: reliability
+    weight: 0.20
+    direction: benefit
+    description: "Uptime, failure rate, or consistency"
+
+  - name: ease_of_use
+    weight: 0.10
+    direction: benefit
+    description: "Ease of adoption and learning curve"
+
+  - name: scalability
+    weight: 0.10
+    direction: benefit
+    description: "Ability to scale with growing demands"
