@@ -136,6 +136,45 @@ uvicorn adi.interfaces.api:app --reload
 - **Scenarios**: what-if and multi-scenario comparison with ranking stability and robust options.
 - **Learning**: Bayesian-style weight updates from accept/reject/override feedback; profiles stored as JSON.
 
+## ⚙️ Configurable parameters
+
+Everything is driven by the **DecisionRequest** and optional **policy overrides**. No free text passes into the core engine.
+
+### Decision request
+
+| Parameter | Description |
+|-----------|-------------|
+| **options** | List of candidates. Each has `name`, `values` (list of `criterion_name` + `value`), optional `confidence` per value, optional `evidence` (source, quality), and `metadata`. |
+| **criteria** | List of criteria: `name`, `weight` (0–1], `direction` (`benefit` or `cost`), optional `fuzzy_set` / `fuzzy_set_definitions`, `description`. |
+| **constraints** | Optional list: `constraint_type` (`must_include`, `must_exclude`, `min_value`, `max_value`), `option_name`, `criterion_name`, `threshold`, `hard` (true = eliminate, false = penalize). |
+| **policy_name** | Strategy: `"balanced"`, `"risk_averse"`, or `"exploratory"`. |
+| **policy_overrides** | Dict to override specific policy parameters (see Policy, below). |
+| **profile_id** | Optional ID for loading/saving learned weights (used with feedback). |
+| **preferences** | Optional `WeightProfile`: explicit `weights` (and optional `fuzzy_overrides`) instead of defaults. |
+| **context** | Optional short text for logging/explanation (max 512 chars). |
+
+### Policy (via `policy_overrides` or YAML packs)
+
+| Parameter | Description |
+|-----------|-------------|
+| **uncertainty_penalty_factor** | How much low-confidence evidence penalizes the score (0–1). |
+| **missingness_penalty_factor** | Penalty per missing criterion value, scaled by weight (0–1). |
+| **variance_penalty_factor** | (risk_averse) Penalty for options with high score variance across criteria (0–1). |
+| **exploration_bonus_factor** | (exploratory) Bonus for options that score very differently from the frontrunner (0–1). |
+| **constraint_priority_mode** | `eliminate`, `penalize`, or `warn`. |
+| **soft_constraint_penalty** | Score multiplier when a soft constraint is violated (0–1). |
+| **topsis_enabled** | If true, use TOPSIS distance-based scoring instead of weighted sum. |
+| **use_cell_confidence** | If true, confidence is applied per cell (v_ij × c_ij); otherwise as a post-score adjustment. |
+| **sensitivity_perturbation_pct** | Weight perturbation percentage for sensitivity analysis (e.g. 10). |
+
+### Feedback (learning)
+
+| Parameter | Description |
+|-----------|-------------|
+| **action** | `"accept"`, `"reject"`, or `"override"`. |
+| **chosen_option** | Required when `action="override"`: the option the user actually chose. |
+| **reason** | Optional free text. |
+
 ## 🧪 Tests
 
 From the project root, install the package then run tests:
