@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "ADI: Agent Decision Intelligence Library"
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Gousopoulos
+    given-names: Dimitrios
+version: 1.0.1
+date-released: 2026-02-28
+doi: 10.5281/zenodo.18814451
+url: https://github.com/dimgouso/adi-decision
