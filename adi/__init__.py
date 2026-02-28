@@ -5,7 +5,7 @@ and confidence. Use in-process (decide, what_if, compare, feedback) or via
 agent tools (get_openai_tools, get_anthropic_tools, call_adi_tool).
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from adi.core.decision_engine import compare, decide, feedback, what_if
 from adi.interfaces.agent_adapter import call_adi_tool, get_anthropic_tools, get_openai_tools

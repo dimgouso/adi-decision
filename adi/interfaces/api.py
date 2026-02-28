@@ -10,7 +10,7 @@ from adi.schemas.decision_request import DecisionRequest
 app = FastAPI(
     title="ADI — Agent Decision Intelligence",
     description="Structured decision making with policy, explainability, and confidence.",
-    version="0.1.0",
+    version="0.1.1",
 )
 
 
