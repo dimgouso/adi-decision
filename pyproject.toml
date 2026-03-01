@@ -63,12 +63,12 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/dimgouso/adi-decision"
-Documentation = "https://github.com/dimgouso/adi-decision#readme"
-Repository = "https://github.com/dimgouso/adi-decision"
-Issues = "https://github.com/dimgouso/adi-decision/issues"
-Changelog = "https://github.com/dimgouso/adi-decision/blob/main/CHANGELOG.md"
-Releases = "https://github.com/dimgouso/adi-decision/releases"
+Homepage = "https://github.com/dimgouso/adi-Agent-Decision-Intelligence"
+Documentation = "https://github.com/dimgouso/adi-Agent-Decision-Intelligence#readme"
+Repository = "https://github.com/dimgouso/adi-Agent-Decision-Intelligence"
+Issues = "https://github.com/dimgouso/adi-Agent-Decision-Intelligence/issues"
+Changelog = "https://github.com/dimgouso/adi-Agent-Decision-Intelligence/blob/main/CHANGELOG.md"
+Releases = "https://github.com/dimgouso/adi-Agent-Decision-Intelligence/releases"
 
 [project.scripts]
 adi = "adi.interfaces.cli:app"

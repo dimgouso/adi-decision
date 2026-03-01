@@ -13,7 +13,7 @@ For dry runs or first-time verification, use the manual workflow dispatch path w
 
 ## One-time GitHub repository setup
 
-Create these GitHub environments in `dimgouso/adi-decision`:
+Create these GitHub environments in `dimgouso/adi-Agent-Decision-Intelligence`:
 
 - `testpypi`
 - `pypi`
@@ -29,7 +29,7 @@ The workflow file that publishes is:
 Create a Trusted Publisher for:
 
 - owner: `dimgouso`
-- repository: `adi-decision`
+- repository: `adi-Agent-Decision-Intelligence`
 - workflow: `release.yml`
 - environment: `testpypi`
 
@@ -38,7 +38,7 @@ Create a Trusted Publisher for:
 Create a Trusted Publisher for:
 
 - owner: `dimgouso`
-- repository: `adi-decision`
+- repository: `adi-Agent-Decision-Intelligence`
 - workflow: `release.yml`
 - environment: `pypi`
 - project name: `adi-decision`

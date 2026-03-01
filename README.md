@@ -2,8 +2,8 @@
 
 **Rank options, quantify confidence, and explain the decision.**
 
-[![CI](https://github.com/dimgouso/adi-decision/actions/workflows/ci.yml/badge.svg)](https://github.com/dimgouso/adi-decision/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/dimgouso/adi-decision?sort=semver)](https://github.com/dimgouso/adi-decision/releases)
+[![CI](https://github.com/dimgouso/adi-Agent-Decision-Intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/dimgouso/adi-Agent-Decision-Intelligence/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/dimgouso/adi-Agent-Decision-Intelligence?sort=semver)](https://github.com/dimgouso/adi-Agent-Decision-Intelligence/releases)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 
@@ -30,7 +30,7 @@ Status: `alpha`. The core API is usable today, but expect refinement as real-wor
 From source:
 
 ```bash
-git clone https://github.com/dimgouso/adi-decision.git
+git clone https://github.com/dimgouso/adi-Agent-Decision-Intelligence.git
 cd adi-decision
 pip install -e .
 ```
@@ -144,7 +144,7 @@ twine check dist/*
 
 - Changelog: [CHANGELOG.md](CHANGELOG.md)
 - Publishing guide: [docs/PUBLISHING.md](docs/PUBLISHING.md)
-- GitHub Releases: [github.com/dimgouso/adi-decision/releases](https://github.com/dimgouso/adi-decision/releases)
+- GitHub Releases: [github.com/dimgouso/adi-Agent-Decision-Intelligence/releases](https://github.com/dimgouso/adi-Agent-Decision-Intelligence/releases)
 
 ## License
 
